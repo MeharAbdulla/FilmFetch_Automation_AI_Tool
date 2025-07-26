@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+undetected-chromedriver
+beautifulsoup4 

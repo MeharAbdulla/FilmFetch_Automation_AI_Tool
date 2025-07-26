@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFetch Pro - Professional Movie Scraper</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-film"></i>
+                    <span>FilmFetch Pro</span>
+                </div>
+                <div class="nav-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="totalMovies">0</div>
+                        <div class="stat-label">Movies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="lastUpdate">-</div>
+                        <div class="stat-label">Last Update</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h1 class="dashboard-title">Professional Movie Scraper</h1>
+                    <p class="dashboard-subtitle">Extract and manage action movies from HDMovie2 with advanced filtering and analytics</p>
+                </div>
+
+                <div class="controls-section">
+                    <div class="controls-grid">
+                        <div class="control-group">
+                            <label class="control-label">Scraping Actions</label>
+                            <button id="scrapeBtn" class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                <span>Start Scraping</span>
+                            </button>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Data Management</label>
+                            <button id="refreshBtn" class="btn btn-secondary">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>Refresh Data</span>
+                            </button>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Export Options</label>
+                            <button id="exportBtn" class="btn btn-secondary">
+                                <i class="fas fa-file-export"></i>
+                                <span>Export CSV</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-section" id="statusSection" style="display: none;">
+                    <div class="status-message" id="statusMessage"></div>
+                </div>
+
+                <div class="movies-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Movie Collection</h2>
+                        <div class="filters">
+                            <input type="text" id="searchBox" class="search-box" placeholder="Search movies...">
+                            <select id="sortSelect" class="search-box">
+                                <option value="name">Sort by Name</option>
+                                <option value="rating">Sort by Rating</option>
+                                <option value="views">Sort by Views</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="moviesContainer">
+                        <div class="empty-state">
+                            <i class="fas fa-film"></i>
+                            <h3>No Movies Available</h3>
+                            <p>Start scraping to populate your movie collection</p>
+                        </div>
+                    </div>
+
+                    <div class="pagination" id="pagination" style="display: none;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
